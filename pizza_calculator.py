@@ -1,5 +1,6 @@
 # This "Pizza Calculator" takes the orders of a set amount of travelers chosen by the users and calculates the total price of all the orders
 # The user inputs the size of the pizza and the amount of slices for each individual traveler
+# THE PIZZAS ARE SPLIT INTO 8 SLICES EACH
 
 
 # Defines prices for pizzas depending on size
