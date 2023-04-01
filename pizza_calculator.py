@@ -41,7 +41,7 @@ def main():
     print("Good evening, fellow travelers! You must be exhausted from such a long journey over the Broken Mountains. But fear not! We here at "
           "the Flouncing Fellows has got you covered. Being the most exclusive pizza place across the Veiled Valleys, we have fantastic prices "
           "for immaculate pizza.")
-    print("We serve our pizzas either small, medium, or large; the size determines the price. A small pizza costs $1, a medium $2, and a large $4.")
+    print("We serve our pizzas either small, medium, or large; the size determines the price. A small pizza costs $1, a medium $2.5, and a large $4.")
 
     # Initializes a list in which each individual traveler can be stored
     travelers = []
@@ -89,7 +89,7 @@ def take_traveler_orders(travelers, num_travelers, sizes):
         print("")
 
         traveler = Traveler(name, size, slices)
-        print("The price will be " + str(traveler.total_sum) + ".")
+        print("The price will be $" + str(traveler.total_sum) + ".")
         travelers.append(traveler)
 
 
