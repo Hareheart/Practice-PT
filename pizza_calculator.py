@@ -73,13 +73,8 @@ def take_traveler_orders(travelers, num_travelers, sizes):
         print("")
         name = input("What is your name, traveler? ")
 
-        size = input("Hello, " + name + ". What size would you like? ")
-        while True:
-            if size not in sizes:
-                print("Fellow traveler, please enter one of the three sizes available.")
-                size = input("What size would you like? ")
-            elif size in sizes:
-                break
+        size_choice = input("Hello, " + name + ". What size would you like? ")
+        size = choose_size(size_choice, sizes)
 
         while True:
             try:
@@ -92,6 +87,16 @@ def take_traveler_orders(travelers, num_travelers, sizes):
         traveler = Traveler(name, size, slices)
         print("The price will be $" + str(traveler.total_sum) + ".")
         travelers.append(traveler)
+
+
+def choose_size(size_choice, sizes):
+    while True:
+        if size_choice not in sizes:
+            print("Fellow traveler, please enter one of the three sizes available.")
+            size_choice = input("What size would you like? ")
+        elif size_choice in sizes:
+            break
+    return size_choice
 
 
 def calculate_prices(travelers):
